@@ -1,5 +1,6 @@
 import React from 'react';
 import Task from './components/task/task'
+import api from './services/api'
 import './global.css';
 import './App.css';
 
