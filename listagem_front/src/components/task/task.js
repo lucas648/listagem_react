@@ -11,6 +11,11 @@ function task() {
             description,
             responsible,
         });
+
+        setDescription('');
+        setResponsible('');
+
+        setTasks([...tasks, response.data]);
     };
 
     return (
