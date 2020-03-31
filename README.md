@@ -14,9 +14,11 @@ a serem passadoos para esta tabela no bd e através da lib 'mongoose' envia este
 
 Na pasta 'controllers' são definidos no arquivo 'taskControllers.js' os métodos de conexão com o bd 
 
-'store': Que possibilita uma tarefa ser inserida no bd
-'index': Que possibilita a busca de todas as tarefas no bd
-'delete': Que possibilita a exclusão de uma tarefa do bd através do Id
+'store': Que possibilita uma tarefa ser inserida no bd;
+
+'index': Que possibilita a busca de todas as tarefas no bd;
+
+'delete': Que possibilita a exclusão de uma tarefa do bd através do Id;
 
 ## Rotas
 
@@ -25,9 +27,11 @@ para o front pode realizar a chamada destes métodos, para envio, recuperação 
 
 Já no front as rotas são definidas para as páginas ou componentes, através da lib 'react-router-dom', ultilizando dos
 componentes:
-'BrowserRouter': Que define o inicio do roteamento dos componentes e por isso deve englobar a definição das rotas 
-'Switch': Que permite que sejam definidas mais de uma rota 
-'Route': Que define a rota, recebendo o caminho em si e o componente a que a rota vai chamar
+'BrowserRouter': Que define o inicio do roteamento dos componentes e por isso deve englobar a definição das rotas;
+
+'Switch': Que permite que sejam definidas mais de uma rota;
+
+'Route': Que define a rota, recebendo o caminho em si e o componente a que a rota vai chamar;
 
 ## Component Task
 
