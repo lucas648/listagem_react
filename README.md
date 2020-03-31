@@ -1,4 +1,4 @@
-# listagem_react
+# Listagem_react
 
 Neste Projeto é criada uma lista de afazeres, que é alimentada por um 
 formulário que recebe a descrição da tarefa e seu responsável.
@@ -27,6 +27,7 @@ para o front pode realizar a chamada destes métodos, para envio, recuperação 
 
 Já no front as rotas são definidas para as páginas ou componentes, através da lib 'react-router-dom', ultilizando dos
 componentes:
+
 'BrowserRouter': Que define o inicio do roteamento dos componentes e por isso deve englobar a definição das rotas;
 
 'Switch': Que permite que sejam definidas mais de uma rota;
