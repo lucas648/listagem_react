@@ -50,8 +50,9 @@
     font-weight: bold;
     color: #ffffff;
     cursor: pointer;
+    margin-bottom: 16px;
 }
 
-aside form button:hover {
+.task-field-button:hover {
     background: #6931ca;
 }

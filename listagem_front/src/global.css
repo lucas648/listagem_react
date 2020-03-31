@@ -24,3 +24,7 @@ textarea {
   padding: 16px 24px;
   line-height: 24px;
 }
+
+.back-link {
+  margin: 16px;
+}

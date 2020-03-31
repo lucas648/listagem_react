@@ -16,6 +16,7 @@
     box-shadow: 0 0 14px 0 rgba(0, 0, 0, 0.02);
     border-radius: 2px;
     padding: 20px;
+    margin-bottom: 16px;
 }
 .title-container {
     text-align: center;
@@ -36,7 +37,7 @@
     margin-top: 15px;
     background: #7d40e7;
     border-radius: 2px;
-    padding: 15px 20px;
+    padding: 10px 15px;
     font-weight: bold;
     color: #ffffff;
     cursor: pointer;
