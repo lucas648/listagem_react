@@ -15,19 +15,13 @@ function Task() {
                 description,
                 reponsible,
             });
-            localStorage.setItem('taskId', response.id)
             alert('Tarefa Cadastrada com sucesso.');
         }catch (err) {
             alert('Erro ao cadastrar tente novamente.');
         }
 
-
-
-
         setDescription('');
         setResponsible('');
-
-        //setTasks([...tasks, response.data]);
     };
 
     return (

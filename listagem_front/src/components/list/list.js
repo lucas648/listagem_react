@@ -8,7 +8,6 @@ import api from '../../services/api';
 function List() {
     const [tasks, setTasks] = useState([]);
 
-
     useEffect(() =>{
         async function loadTasks() {
             const response = await api.get('/list-tasks');
