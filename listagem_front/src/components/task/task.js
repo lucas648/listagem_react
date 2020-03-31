@@ -13,10 +13,11 @@ function Task() {
         e.preventDefault()
 
         try {
-            await api.post('/tasks', {
+            const response = await api.post('/tasks', {
                 description,
                 reponsible,
             });
+            localStorage.setItem('taskId', response.id)
             alert('Tarefa Cadastrada com sucesso.');
             history.push('/list-tasks')
         }catch (err) {

@@ -19,5 +19,13 @@ module.exports = {
         const tasks = await Task.find();
 
         return response.json(tasks)
+    },
+
+    async delete(request, response) {
+        const id = request.params.id;
+
+        await Task.deleteOne(id)
+        
     }
+
 };
