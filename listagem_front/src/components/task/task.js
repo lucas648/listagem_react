@@ -1,13 +1,11 @@
 import React, {useState} from 'react';
-import {Link, useHistory} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 import './task.css';
 import api from '../../services/api';
 
 function Task() {
     const [description, setDescription] = useState('');
     const [reponsible, setResponsible] = useState('');
-     
-    const history = useHistory();
 
     async function addTask(e) {
         e.preventDefault()
@@ -19,7 +17,6 @@ function Task() {
             });
             localStorage.setItem('taskId', response.id)
             alert('Tarefa Cadastrada com sucesso.');
-            history.push('/list-tasks')
         }catch (err) {
             alert('Erro ao cadastrar tente novamente.');
         }
