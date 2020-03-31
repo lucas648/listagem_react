@@ -23,11 +23,12 @@ function List() {
                 <ul>
                     {tasks.map( task => (
                     <li key={task.id} className="task-item">
-                        <label>Descrição da Tarefa: </label>
+                        <label className= "list-item-title">Descrição da Tarefa: </label>
                         <p>{task.description}</p>
-                        <label>Responsável: </label>
+                        <label className= "list-item-title">Responsável: </label>
                         <p>{task.reponsible}</p>
-                        <input type="checkbox"></input>
+                        <button>Deletar Task</button>
+                        <input className="list-item-checkbox" type="checkbox"></input>
                     </li>
                     ))}
                 </ul>
