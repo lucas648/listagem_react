@@ -25,7 +25,7 @@ function Task() {
             <form onSubmit={addTask} >
                 <div className="task-field">
                     <label htmlFor="description">Descrição da Tarefa:</label>
-                    <input 
+                    <textarea 
                       name="description" 
                       id="description"
                       value={description}

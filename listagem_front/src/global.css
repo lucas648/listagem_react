@@ -14,3 +14,13 @@ html, body, #root {
 body{
   background-color: #e5e6f0;
 }
+
+textarea {
+  width: 100%;
+  resize: vertical;
+  min-height: 140px;
+  height: 60px;
+  border-radius: 8px;
+  padding: 16px 24px;
+  line-height: 24px;
+}
