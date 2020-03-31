@@ -8,11 +8,7 @@ routes.post('/tasks', TaskControler.store);
 
 routes.get('/list-tasks', TaskControler.index);
 
-routes.delete('/tasks/:id', celebrate({
-    [Segments.PARAMS]: Joi.object().keys({
-        id: Joi.number().required(),
-    })
-}), TaskControler.delete);
+routes.delete('/tasks/:_id', TaskControler.delete);
 
 
 module.exports = routes;

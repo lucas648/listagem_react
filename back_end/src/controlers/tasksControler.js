@@ -22,10 +22,10 @@ module.exports = {
     },
 
     async delete(request, response) {
-        const id = request.params.id;
 
-        await Task.deleteOne(id)
-        
+        const task = await Task.findByIdAndDelete({})
+
+        return task;
     }
 
 };
