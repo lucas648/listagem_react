@@ -19,8 +19,8 @@ function List() {
 
     async function doTask(_id) {
         try{
-            await api.delete(`task/${_id}`);
-
+            await api.delete(`/tasks/${_id}`);
+            alert('Tarefa concluida')
         }catch(err){
             alert('Erro ao concluir Tarefa')
         }
@@ -36,8 +36,7 @@ function List() {
                         <p>{task.description}</p>
                         <label className= "list-item-title">Responsável: </label>
                         <p>{task.reponsible}</p>
-                        <button onClick={() => doTask(task._id)}>Deletar Task</button>
-                        <input className="list-item-checkbox" type="checkbox"></input>
+                        <button onClick={() => doTask(task._id)}>Concluir Tarefa</button>
                     </li>
                     ))}
                 </ul>
