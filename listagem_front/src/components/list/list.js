@@ -12,14 +12,14 @@ function List() {
     useEffect(() =>{
         async function loadTasks() {
             const response = await api.get('/list-tasks');
-             setTasks(response.data);
+            setTasks(response.data);
         }
         loadTasks();
     },[]);
 
-    async function doTask(id) {
+    async function doTask(_id) {
         try{
-            await api.delete(`/task/${id}`);
+            await api.delete(`task/${_id}`);
 
         }catch(err){
             alert('Erro ao concluir Tarefa')
@@ -31,12 +31,12 @@ function List() {
             <strong>Lista de Tarefas</strong>
                 <ul>
                     {tasks.map( task => (
-                    <li key={localStorage.getItem('taskId')} className="task-item">
+                    <li key={task._id} className="task-item">
                         <label className= "list-item-title">Descrição da Tarefa: </label>
                         <p>{task.description}</p>
                         <label className= "list-item-title">Responsável: </label>
                         <p>{task.reponsible}</p>
-                        <button onClick={() => doTask(tasks.id)}>Deletar Task</button>
+                        <button onClick={() => doTask(task._id)}>Deletar Task</button>
                         <input className="list-item-checkbox" type="checkbox"></input>
                     </li>
                     ))}
