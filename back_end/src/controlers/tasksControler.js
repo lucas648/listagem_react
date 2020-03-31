@@ -21,11 +21,14 @@ module.exports = {
         return response.json(tasks)
     },
 
-    async delete(request, response) {
-
-        const task = await Task.findByIdAndDelete({})
-
-        return task;
+    async delete (req, res) {
+        await Task.findOneAndDelete({ _id: req.params.id }, (err, result) => {
+            if (result) {
+                return res.status(200).send(null);
+            } else {
+                return res.status(404).send(null);
+            }
+        })
     }
 
 };
