@@ -1,5 +1,10 @@
-
-main ul {
+.list-container {
+    width: 100%;
+    max-width: 1180px;
+    padding: 0 30px;
+    margin: 32px auto;
+}
+.task-list {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
@@ -12,14 +17,29 @@ main ul {
     border-radius: 2px;
     padding: 20px;
 }
+.title-container {
+    text-align: center;
+    margin: 20px
+}
+.list-title {
+    font-size: large;
+    line-height: 24px;
+}
 
 .list-item-title {
     font-weight: bold;
 }
 
-.task-item button{
-    
-    margin-right: 34px;
+
+.task-item-button{
+    border: 0;
+    margin-top: 15px;
+    background: #7d40e7;
+    border-radius: 2px;
+    padding: 15px 20px;
+    font-weight: bold;
+    color: #ffffff;
+    cursor: pointer;
 }
 @media (max-width: 650px) {
    main ul {

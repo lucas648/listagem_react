@@ -34,11 +34,11 @@ function Task() {
     };
 
     return (
-        <aside>
-            <strong>Cadastrar Tarefa</strong>
-            <form onSubmit={addTask} >
+        <aside className="task-container">
+            <strong className="task-title">Cadastrar Tarefa</strong>
+            <form className="task-form" onSubmit={addTask} >
                 <div className="task-field">
-                    <label htmlFor="description">Descrição da Tarefa:</label>
+                    <label className="task-field-label" htmlFor="description">Descrição da Tarefa:</label>
                     <textarea 
                       name="description" 
                       id="description"
@@ -48,8 +48,9 @@ function Task() {
                     />
                 </div>
                 <div className="task-field">
-                    <label htmlFor="reponsible">Responsável pela Tarefa:</label>
-                    <input 
+                    <label className="task-field-label" htmlFor="reponsible">Responsável pela Tarefa:</label>
+                    <input
+                      className="task-field-input" 
                       name="reponsible" 
                       id="reponsible"
                       value={reponsible}
@@ -57,7 +58,7 @@ function Task() {
                       required
                     />
                 </div>
-                <button type="submit">Salvar</button>
+                <button className="task-field-button" type="submit">Salvar</button>
                 <Link to="/list-tasks" className="back-link">
                     Ir para lista de tarefas 
                 </Link>
