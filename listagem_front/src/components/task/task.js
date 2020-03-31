@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {Link} from 'react-router-dom';
+import {Link, useHistory} from 'react-router-dom';
 import './task.css';
 import api from '../../services/api';
 
@@ -7,11 +7,24 @@ function Task() {
     const [description, setDescription] = useState('');
     const [reponsible, setResponsible] = useState('');
      
+    const history = useHistory();
+
     async function addTask(e) {
-        const response = await api.post('/tasks', {
-            description,
-            reponsible,
-        });
+        e.preventDefault()
+
+        try {
+            await api.post('/tasks', {
+                description,
+                reponsible,
+            });
+            alert('Tarefa Cadastrada com sucesso.');
+            history.push('/list-tasks')
+        }catch (err) {
+            alert('Erro ao cadastrar tente novamente.');
+        }
+
+
+
 
         setDescription('');
         setResponsible('');
