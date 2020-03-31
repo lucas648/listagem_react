@@ -5,10 +5,8 @@ import Task from '../task/task';
 
 
 
-function list() {
+function List() {
     const [tasks, setTasks] = useState([]);
-
-    task = new Task;
 
     useEffect(() =>{
         async function loadTasks() {
@@ -23,8 +21,8 @@ function list() {
             <ul>
                 {tasks.map( task => (
                     <li key={task.id} className="task-item">
-                        <p>{Task.description}</p>
-                        <p>{Task.responsible}</p>
+                        <p>{task.description}</p>
+                        <p>{task.reponsible}</p>
                     </li>
                 ))}
             </ul>

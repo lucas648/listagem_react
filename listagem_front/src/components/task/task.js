@@ -1,27 +1,28 @@
 import React, {useState} from 'react';
+import {Link} from 'react-router-dom';
 import './task.css';
 import api from '../../services/api';
 
-function task() {
+function Task() {
     const [description, setDescription] = useState('');
-    const [responsible, setResponsible] = useState('');
+    const [reponsible, setResponsible] = useState('');
      
     async function addTask(e) {
         const response = await api.post('/tasks', {
             description,
-            responsible,
+            reponsible,
         });
 
         setDescription('');
         setResponsible('');
 
-        setTasks([...tasks, response.data]);
+        //setTasks([...tasks, response.data]);
     };
 
     return (
         <aside>
             <strong>Cadastrar Tarefa</strong>
-            <form onSubmit={addTask}>
+            <form onSubmit={addTask} >
                 <div className="task-field">
                     <label htmlFor="description">Descrição da Tarefa:</label>
                     <input 
@@ -33,16 +34,19 @@ function task() {
                     />
                 </div>
                 <div className="task-field">
-                    <label htmlFor="responsible">Responsável pela Tarefa:</label>
+                    <label htmlFor="reponsible">Responsável pela Tarefa:</label>
                     <input 
-                      name="responsible" 
-                      id="responsible"
-                      value={responsible}
+                      name="reponsible" 
+                      id="reponsible"
+                      value={reponsible}
                       onChange={e => setResponsible(e.target.value)}
                       required
                     />
                 </div>
                 <button type="submit">Salvar</button>
+                <Link to="/list-tasks" className="back-link">
+                    Ir para lista de tarefas 
+                </Link>
             </form>
         </aside>
     )
