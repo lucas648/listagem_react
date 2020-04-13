@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import {Link} from 'react-router-dom';
 import './Task.css';
 import api from '../../services/api';
+import Swal from 'sweetalert2'
 
 function Task() {
     const [description, setDescription] = useState('');
@@ -15,7 +16,11 @@ function Task() {
                 description,
                 reponsible,
             });
-            alert('Tarefa Cadastrada com sucesso.');
+            Swal.fire({
+                title: 'Cadastro Realizado',
+                text:'Tarefa Cadastrada com sucesso.',
+                icon:'success'
+            });
         }catch (err) {
             alert('Erro ao cadastrar tente novamente.');
         }

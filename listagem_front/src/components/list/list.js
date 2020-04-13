@@ -2,8 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import './List.css'
 import api from '../../services/api';
-
-
+import Swal from 'sweetalert2'
 
 function List() {
     const [tasks, setTasks] = useState([]);
@@ -19,10 +18,18 @@ function List() {
     async function doTask(_id) {
         try{
             await api.delete(`/tasks/${_id}`);
-            alert('Tarefa concluida')
+            Swal.fire({
+                title: 'Concluído',
+                text:'Tarefa concluida',
+                icon: 'success'
+            })
             setTasks(tasks.filter(task => task._id !== _id))
         }catch(err){
-            alert('Erro ao concluir Tarefa')
+            Swal.fire({
+                title: 'ERRO',
+                text: 'Erro ao concluir Tarefa',
+                icon: 'error'
+            })
         }
     }
 
