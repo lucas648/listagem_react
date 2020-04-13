@@ -7,7 +7,7 @@ O dado inserido no formulário é enviado do frontend para o backend e persistid
 
 ## Models
 
-O backend contem o schema para a task, na pasta 'models' no arquivo 'task.js', definindo apenas dois valores
+O backend contem o schema para a task, na pasta 'models' no arquivo 'Task.js', definindo apenas dois valores
 a serem passadoos para esta tabela no bd e através da lib 'mongoose' envia este dado para o MongoDb.
 
 ## Controlers

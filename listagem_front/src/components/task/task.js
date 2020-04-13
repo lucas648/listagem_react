@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {Link} from 'react-router-dom';
-import './task.css';
+import './Task.css';
 import api from '../../services/api';
 
 function Task() {
