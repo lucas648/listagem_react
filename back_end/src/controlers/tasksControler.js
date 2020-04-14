@@ -1,24 +1,34 @@
 const Task = require('../models/task');
 
+
 module.exports = {
     async store(request, response) {
         const { description, reponsible } = request.body;
-    
-        let task = await Task.findOne({description});
+        try {
+            let task = await Task.findOne({description});
 
-        if (!task) {
-            task = await Task.create({
-                description,
-                reponsible,
-            })
+            if (!task) {
+                task = await Task.create({
+                    description,
+                    reponsible,
+                })
+            }
+            return response.json(task);
+        }catch(err) {
+            return erro = new Error(err);
         }
-        return response.json(task);
+
     },
 
     async index(request, response) {
-        const tasks = await Task.find();
+        try {
+            const tasks = await Task.find();
 
-        return response.json(tasks)
+            return response.json(tasks);
+        }catch(err) {
+            return erro = new Error(err);
+        }
+       
     },
 
     async delete (req, res) {
